@@ -10,6 +10,8 @@ import { BreadcrumbComponent } from './showroom/breadcrumb/breadcrumb.component'
 import { Error404Component } from './showroom/error404/error404.component';
 import { MenuHandler } from './showroom/services/menu-handler/menu-handler.service';
 import { I000AboutComponent } from './issues/i000-about/i000-about.component';
+import { I001Parent2childComponent } from './issues/i001-parent2child/i001-parent2child.component';
+import { ChildComponent } from './issues/i001-parent2child/child/child.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { I000AboutComponent } from './issues/i000-about/i000-about.component';
     MeonComponent,
     BreadcrumbComponent,
     Error404Component,
-    I000AboutComponent
+    I000AboutComponent,
+    I001Parent2childComponent,
+    ChildComponent
   ],
   imports: [
     AppRoutingModule,
