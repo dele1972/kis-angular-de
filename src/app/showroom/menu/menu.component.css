@@ -1,0 +1,10 @@
+.nobullets {
+    list-style-type: none;
+}
+
+.menuitem {
+    width: 100%; 
+    border: 1px solid silver; 
+    border-radius: 3px; 
+    padding:5px;
+}

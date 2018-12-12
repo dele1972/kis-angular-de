@@ -1,0 +1,28 @@
+{
+    "main": [
+        {
+            "visible": false,
+            "title": "Dummy Titel",
+            "description": "Hier eine kurze Beschreibung des Oberthemas einfügen",
+            "issues": [
+                {
+                    "title": "Name des Schau-Projekts wie er in der Liste erscheint",
+                    "component": "menu",
+                    "path": "/menu"
+                }
+            ]
+        },
+        {
+            "visible": true,
+            "title": "Allgemein",
+            "description": "Allgemeines über dieses Projekt, Angular oder Programmierung.",
+            "issues": [
+                {
+                    "title": "Über dieses Projekt",
+                    "component": "I000AboutComponent",
+                    "path": "/about"
+                }
+            ]
+        }
+    ]
+}
