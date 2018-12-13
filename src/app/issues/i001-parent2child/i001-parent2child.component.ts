@@ -8,11 +8,20 @@ import { Component } from '@angular/core';
 
     <div class="chip bg-dark">Parent</div>
     <p>
-      Datenaustausch vom Parent zum Child:
+      Infos unter 
+      <a href="https://github.com/dele1972/kis-angular-de/tree/issue/sharing-data/i001-parent2child/src/app/issues/i001-parent2child"
+      target="_blank">GitHub</a>
     </p>
     <ul>
-        <li>Parent ruft child mit Property Binding auf: <br /><code>&lt;app-child [childMessage]="messageFromParent"/&gt;</code></li>
-        <li>messageFromParent wird in parent.component.ts gefüllt</li>
+        <li>
+          Parent ruft child auf und bindet die Element Eigenschaft 
+          <code>childMessage</code> mit einer eigenen Klasseneigenschaft:<br />
+          <code>&lt;app-child [childMessage]="messageFromParent"/&gt;</code>
+        </li>
+        <li>
+          <code>messageFromParent</code> ist die Klassen Eigenschaft vom Parent 
+          und wird dort gefüllt (parent.component.ts)
+        </li>
     </ul>
 
     <div class="columns">
@@ -28,6 +37,13 @@ import { Component } from '@angular/core';
 })
 export class I001Parent2childComponent {
 
-  private messageFromParent = "private Nachricht vom Parent";
+  private messageFromParent = "Erste private Nachricht vom Parent";
 
+  constructor() {
+    setTimeout(() => {
+      this.messageFromParent = "Zweite private Nachricht " +
+        "wurde auch vom Parent nachträglich geändert :)";
+    }, 3000);
+  
+  }
 }
