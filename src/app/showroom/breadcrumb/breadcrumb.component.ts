@@ -12,17 +12,17 @@ import { MenuHandler } from '../services/menu-handler/menu-handler.service';
 })
 export class BreadcrumbComponent {
 
-  private _router: Router;
+  private router: Router;
 
-  private _menuHandler: MenuHandler;
+  private menuHandler: MenuHandler;
   public menu: object[];
 
   constructor(router: Router, menuHandler: MenuHandler) {
 
-    this._router = router;
-    this._menuHandler = menuHandler;
+    this.router = router;
+    this.menuHandler = menuHandler;
 
-    this._router.events
+    this.router.events
       .pipe(
         filter(
           (event: RouterEvent): boolean => {
@@ -35,16 +35,16 @@ export class BreadcrumbComponent {
       .subscribe(
         (event: NavigationEnd): void => {
 
-          var snapshot = this._router.routerState.snapshot.root;
+          var snapshot = this.router.routerState.snapshot.root;
 
           if (snapshot['_routerState'].url != "/menu") {
 
-            if (this._menuHandler.hasMenuItemForUrl(snapshot['_routerState'].url)) {
+            if (this.menuHandler.hasMenuItemForUrl(snapshot['_routerState'].url)) {
 
-              if (this._menuHandler.getBcMenu().length <= 1) {
+              if (this.menuHandler.getBcMenu().length <= 1) {
 
-                var newItem = this._menuHandler.getMenuItemForUrl(snapshot['_routerState'].url);
-                this._menuHandler.addBcItemAsObj(
+                var newItem = this.menuHandler.getMenuItemForUrl(snapshot['_routerState'].url);
+                this.menuHandler.addBcItemAsObj(
                   {
                     "title": newItem.title,
                     "url": ".." + newItem.path
@@ -53,7 +53,7 @@ export class BreadcrumbComponent {
               }
             }
           } else {
-            this._menuHandler.initBcMenu();
+            this.menuHandler.initBcMenu();
           }
         }
       );
