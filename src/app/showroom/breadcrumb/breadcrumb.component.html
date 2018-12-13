@@ -1,7 +1,7 @@
 <div class="columns">
   <div class="column col-6">
     <ul class="breadcrumb">
-      <li class="breadcrumb-item" *ngFor="let menuItem of this._menuHandler.getBcMenu()">
+      <li class="breadcrumb-item" *ngFor="let menuItem of this.menuHandler.getBcMenu()">
         <a routerLink="{{menuItem.url}}">{{menuItem.title}}</a>
       </li>
     </ul>
