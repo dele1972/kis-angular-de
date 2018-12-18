@@ -7,12 +7,12 @@ master on [StackBlitz](https://stackblitz.com/github/dele1972/kis-angular-de/tre
 ## Inhalt
 
 1. [Über](#about)
-1. [Aufbau](#about)
+1. [Aufbau](#structure)
    1. [Branches](#branches)
 1. [Neue Schauprojekte hinzufügen](#newproject)
 1. [Themen](#topics)
 
-<a name="structure"></a>
+<a name="about"></a>
 
 ## Über [↸](#toc)
 
