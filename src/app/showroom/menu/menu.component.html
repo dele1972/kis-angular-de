@@ -1,17 +1,17 @@
 <h2>Themen</h2>
 
 <div class="accordion" *ngFor="let item of menu; let menItemIdx = index">
-  <div *ngIf="item.visible">
+  <div *ngIf="item['visible']">
     <input type="checkbox" id="accordion-{{menItemIdx}}" name="accordion-checkbox" hidden>
     <label class="accordion-header" for="accordion-{{menItemIdx}}">
       <i class="icon icon-arrow-right mr-{{menItemIdx}}"></i>
-      {{item.title}}
+      {{ item['title'] }}
     </label>
     <div class="accordion-body">
       <div class="menuitem">
-        <p><strong>Beschreibung:</strong> {{item.description}}</p>
-        <ul *ngFor="let issue of item.issues; let is=index">
-          <li><a routerLink="../{{issue.path}}">{{issue.title}}</a></li>
+        <p><strong>Beschreibung:</strong> {{ item['description'] }}</p>
+        <ul *ngFor="let issue of item['issues']; let is=index">
+          <li><a routerLink="../{{ issue.path }}">{{ issue.title }}</a></li>
         </ul>
       </div>
     </div>

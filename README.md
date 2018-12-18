@@ -3,7 +3,9 @@
 master on [StackBlitz](https://stackblitz.com/github/dele1972/kis-angular-de/tree/master)
 
 <a name="toc"></a>
+
 ## Inhalt
+
 1. [Über](#about)
 1. [Aufbau](#about)
    1. [Branches](#branches)
@@ -11,14 +13,17 @@ master on [StackBlitz](https://stackblitz.com/github/dele1972/kis-angular-de/tre
 1. [Themen](#topics)
 
 <a name="structure"></a>
+
 ## Über [↸](#toc)
 
 Dieses Projekt soll eine [Angular](https://angular.io/) Pattern Sammlung werden. Immer wenn ich gewisse Pattern beim Erlernen von Angular erkenne oder ich welche bei einer Internetrecherche finde, dann versuche ich daraus ein kleines 'Schauprojekt' zu machen und hier einzubinden. **keep it simple** bezieht sich dabei auf diese Schauprojekte, welche so klein und einfach wie nur möglich gehalten werden sollen, damit der Fokus auf das jeweilige Pattern liegt.
 
 <a name="structure"></a>
+
 ## Aufbau [↸](#toc)
 
 <a name="branches"></a>
+
 ### Branches [↸](#toc)
 
 Branch | Beschreibung
@@ -28,6 +33,7 @@ Branch | Beschreibung
 **issue/UPPER-TOPIC/SHOWING-SHORT-TITLE** | die jeweilige zu zeigende Komponente zu einem Thema
 
 <a name="newproject"></a>
+
 ## Neue Schauprojekte hinzufügen [↸](#toc)
 
 1. git: Einen neuen Branch von `base` erstellen:  
@@ -47,6 +53,7 @@ Branch | Beschreibung
 1. merge (request) mit master
 
 <a name="topics"></a>
+
 ## Themen [↸](#toc)
 
 issue | Oberthema | Projekt-Titel  
