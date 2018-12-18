@@ -37,13 +37,13 @@ import { Component } from '@angular/core';
 })
 export class I001Parent2childComponent {
 
-  private messageFromParent = "Erste private Nachricht vom Parent";
+  public messageFromParent = 'Erste private Nachricht vom Parent';
 
   constructor() {
     setTimeout(() => {
-      this.messageFromParent = "Zweite private Nachricht " +
-        "wurde auch vom Parent nachträglich geändert :)";
+      this.messageFromParent = 'Zweite private Nachricht' +
+        'wurde auch vom Parent nachträglich geändert :)';
     }, 3000);
-  
+
   }
 }
