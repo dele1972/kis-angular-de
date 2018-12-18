@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
     <h5>ToDo (Child)</h5>
     <ol>
         <li>
-          Input Dekorator importieren:<br /> 
+          Input Dekorator importieren:<br />
           <code>import {{ '{' }} ..., Input {{ '}' }} from '@angular/core';</code>
         </li>
         <li>
