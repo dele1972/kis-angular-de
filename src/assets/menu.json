@@ -23,6 +23,18 @@
                     "path": "/about"
                 }
             ]
-        }
+        },
+        {
+            "visible": true,
+            "title": "Datenaustausch",
+            "description": "Anhand kleiner Projekte sollen die verschiedenen Möglichkeiten eines Datenaustauschs zwischen Komponenten dargestellt werden.",
+            "issues": [
+                {
+                    "title": "Parent -> Child (TS Accessors)",
+                    "component": "I002Parent2childTsaccessorComponent",
+                    "path": "/i002-parent2child-tsaccessor"
+                }
+            ]
+}
     ]
 }
