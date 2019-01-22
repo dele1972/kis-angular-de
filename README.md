@@ -58,4 +58,4 @@ Branch | Beschreibung
 
 issue | Oberthema | Projekt-Titel  
 --- | --- | ---
-002 | Datenaustausch | [Parent -> Child (TypeScript Accessor)](https://github.com/dele1972/kis-angular-de/tree/issue/sharing-data/i002-parent2child-tsaccessor)
+002 | Datenaustausch | [Parent -> Child (TypeScript Accessor)](https://github.com/dele1972/kis-angular-de/tree/issue/sharing-data/i002-parent2child-tsaccessor/src/app/issues/i002-parent2child-tsaccessor)
