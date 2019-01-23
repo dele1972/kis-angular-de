@@ -45,29 +45,33 @@ Im Prinzip wird ein [Input Property wie im Beispiel 001](https://github.com/dele
 Die standard Variante des regulären Property Bindings deckt den üblichen Gebrauch ab. Allerdings kann es sein, dass man nicht global per [`ngOnChanges`](https://angular.io/api/core/OnChanges) auf alle Änderungen aller Properties reagieren möchte, sondern gezielt auf eine einzige.
 
 Zitat 1:
-> ``Most of the times, you can just add some render logic inside the component  
-> depending on the content, but sometimes you need to intercept the value sent  
-> into the component and act upon it before actually showing something.´´  
+> ``Most of the times, you can just add some render logic inside the component depending on the content, but sometimes you need to intercept the value sent into the component and act upon it before actually showing something.´´  
 >  
 > -- <cite>[Medium: "Angular @Input() property changes detection"][[2]](#link2)</cite>
 
 Zitat 2:
 > ``There is no difference in "using ngOnChanges vs not using set"... ;)  
-> Joking aside: One benefit is, if your component has multiple @Input properties  
-> and you want to call a routine when any of them has changed. So less code needed.´´ 
+> Joking aside: One benefit is, if your component has multiple @Input properties and you want to call a routine when any of them has changed. So less code needed.´´  
 >  
 > -- <cite>[Stackoverflow: "Angular2 @Input to a property with get/set"][[3]](#link3)</cite>
 
+Zitat 3:
+> ``When you want to do something when a value change (and along the life of the application, this happens not only at first) -e.g. you want to make a call to a service based upon this value-, you must use get and set. If only happends at init or this value is only for show it, you needn't use get and set´´  
+>  
+> -- <cite>[Stackoverflow: "What is the difference between @Input() and @Input() get and set"][[4]](#link4)</cite>
+
 Allerdings sollte man zwei Sachen im Auge haben - die oop Gemeinde vertäufelt zum Einen den Gebrauch von Getter/Setter (siehe u.a. [[6]](#link6)).  
-Zum Anderen ist da allerdings eine Antwort bei stckoverflow (siehe [[5]](#link5)) sehr viel interessanter: dort wird darauf hingewiesen, dass zur Laufzeit jeweils eine Funktion für die Getter/Setter Methoden kompiliert werden und das bei jedem Aufruf. Sicherlich greifen an dieser Stelle die Performance steigernden Engines (Chrome 'V8', Firefox 'Spidermonkey', usw. - siehe [[7]](#link7)), verlassen kann man sich darauf jedoch nicht und insofern kann man sich hier auch sehr schnell **Performance Einbußen** einhandeln.
+Zum Anderen ist da allerdings eine Antwort bei stackoverflow (siehe [[5]](#link5)) sehr viel interessanter: dort wird darauf hingewiesen, dass zur Laufzeit jeweils eine Funktion für die Getter/Setter Methoden kompiliert wird und das bei jedem Aufruf. Sicherlich greifen an dieser Stelle u.a. die Performance steigernden Engines (Chrome 'V8', Firefox 'Spidermonkey', usw. - siehe [[7]](#link7)), verlassen kann man sich darauf jedoch nicht und insofern kann man sich hier auch sehr schnell **Performance Einbußen** einhandeln.
 
 ---
 
-## Schritt für Schritt (@ToDo: muss noch angepasst werden)
+## Schritt für Schritt
 
-1. In der Child Komponente:  
+1. **In der Child Komponente**:
 
    1. mittels [@Input Dekorator](https://angular.io/guide/template-syntax#input-and-output-properties) jeweils eine ```setter``` und/oder ```getter``` Methode als Komponenten- mit einer eigenen Element-Eigenschaft binden:
+
+      > ``accessors with a ```get``` and no ```set``` are automatically inferred to be readonly´´
 
       * Input Dekorator importieren  
        `import { ..., Input } from '@angular/core';`
@@ -89,7 +93,7 @@ Zum Anderen ist da allerdings eine Antwort bei stckoverflow (siehe [[5]](#link5)
    1. Daten verwenden
       * Die Klasseneigenschaft kann regulär als solche überall in der Komponente weiter verwendet werden - z. B. um per [String Interpolation](https://angular.io/guide/displaying-data#interpolation) den Wert im Child-Template auszugeben:   `{{ childMessage }}`
 
-1. In der Parent Komponente
+1. **In der Parent Komponente**:
 
     1. Den zu übergebenden Wert zur Verfügung stellen, z. B. per:  
        `private messageFromParent = "Nachricht vom Parent!";`
@@ -104,5 +108,3 @@ Zum Anderen ist da allerdings eine Antwort bei stckoverflow (siehe [[5]](#link5)
 Weitere Aussagen die ich im Netz zu diesem Thema gefunden habe - spezieller in den o.g. Links. Allerdings habe ich das noch nicht weiter validiert:
 
 * ngOnChanges approach is great!! Good answer. If the value being set cannot be private e.g. it's used as binding in the template, The _propertyName setter/private naming convention becomes inconsistent . ngOnChanges gets around this perfectly
-* When you want to do something when a value change (and along the life of the application, this happens not only at first) -e.g. you want to make a call to a service based upon this value-, you must use get and set. If only happends at init or this value is only for show it, you needn't use get and set
-* accessors with a ```get``` and no ```set``` are automatically inferred to be readonly

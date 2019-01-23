@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
 
         <div class="columns">
           <div class="column col-5 bg-warning">
-            <app-child class="flexelement" [childMessage]="messageFromParent"></app-child>
+            <app-i002-child class="flexelement" [childMessage]="messageFromParent"></app-i002-child>
           </div>
         </div>
 
@@ -30,7 +30,8 @@ export class I002Parent2childTsaccessorComponent {
   public projectUrl = 'https://github.com/dele1972/kis-angular-de/';
   public issueTree = 'tree/issue/sharing-data/i002-parent2child-tsaccessor/';
   public issue = 'src/app/issues/i002-parent2child-tsaccessor';
-  public url = this.projectUrl + this.issueTree + this.issue;
+  public readme = '#datenaustausch-vom-parent-zum-child-typescript-accessor';
+  public url = this.projectUrl + this.issueTree + this.issue + this.readme;
 
   public messageFromParent = 'Nachricht vom Parent!';
 

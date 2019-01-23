@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-child',
+  selector: 'app-i002-child',
   template: `
     <div class="chip bg-dark">Child</div>
     <div class="panel bg-gray text-dark">
@@ -38,7 +38,7 @@ import { Component, Input } from '@angular/core';
   `,
   styles: []
 })
-export class ChildComponent {
+export class I002ChildComponent {
 
   // Do place private members after public members, alphabetized. (https://angular.io/guide/styleguide#style-05-14)
   public newVal: string;
