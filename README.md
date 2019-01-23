@@ -7,12 +7,12 @@ master on [StackBlitz](https://stackblitz.com/github/dele1972/kis-angular-de/tre
 ## Inhalt
 
 1. [Über](#about)
-1. [Aufbau](#about)
+1. [Aufbau](#structure)
    1. [Branches](#branches)
 1. [Neue Schauprojekte hinzufügen](#newproject)
 1. [Themen](#topics)
 
-<a name="structure"></a>
+<a name="about"></a>
 
 ## Über [↸](#toc)
 
@@ -59,3 +59,4 @@ Branch | Beschreibung
 issue | Oberthema | Projekt-Titel  
 --- | --- | ---
 001 | Datenaustausch | [Parent -> Child (property Binding)](https://github.com/dele1972/kis-angular-de/tree/issue/sharing-data/i001-parent2child/src/app/issues/i001-parent2child)
+002 | Datenaustausch | [Parent -> Child (TypeScript Accessor)](https://github.com/dele1972/kis-angular-de/tree/issue/sharing-data/i002-parent2child-tsaccessor/src/app/issues/i002-parent2child-tsaccessor)

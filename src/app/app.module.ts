@@ -12,6 +12,8 @@ import { MenuHandler } from './showroom/services/menu-handler/menu-handler.servi
 import { I000AboutComponent } from './issues/i000-about/i000-about.component';
 import { I001Parent2childComponent } from './issues/i001-parent2child/i001-parent2child.component';
 import { ChildComponent } from './issues/i001-parent2child/child/child.component';
+import { I002Parent2childTsaccessorComponent } from './issues/i002-parent2child-tsaccessor/i002-parent2child-tsaccessor.component';
+import { I002ChildComponent } from './issues/i002-parent2child-tsaccessor/child/i002-child.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ChildComponent } from './issues/i001-parent2child/child/child.component
     Error404Component,
     I000AboutComponent,
     I001Parent2childComponent,
-    ChildComponent
+    ChildComponent,
+    I002Parent2childTsaccessorComponent,
+    I002ChildComponent
   ],
   imports: [
     AppRoutingModule,

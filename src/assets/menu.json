@@ -33,6 +33,11 @@
                     "title": "Parent -> Child (property Binding)",
                     "component": "I001Parent2childComponent",
                     "path": "/i001-parent2child"
+                },
+                {
+                    "title": "Parent -> Child (TS Accessors)",
+                    "component": "I002Parent2childTsaccessorComponent",
+                    "path": "/i002-parent2child-tsaccessor"
                 }
             ]
         }
